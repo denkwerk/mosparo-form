@@ -18,7 +18,7 @@ $EM_CONF[$_EXTKEY] = [
         ],
         'conflicts' => [],
         'suggests' => [
-            'denkwerk/mosparo-powermail' => ''
+            'mahou/mosparo-powermail' => ''
         ],
     ],
 ];

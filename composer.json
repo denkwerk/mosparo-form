@@ -32,7 +32,7 @@
         "mosparo/php-api-client": "^1.1"
     },
     "suggest": {
-        "denkwerk/mosparo-powermail": "Provides integration of the mosparo spam protection system for Powermail forms in TYPO3."
+        "mahou/mosparo-powermail": "Provides integration of the mosparo spam protection system for Powermail forms in TYPO3."
     },
     "autoload": {
         "psr-4": {

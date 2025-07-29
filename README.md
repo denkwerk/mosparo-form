@@ -10,11 +10,11 @@ It includes these features:
 * Support for Extbase-based forms (`<f:form>`)
 * Easy integration with custom form systems via a **Form Normalizer**
 
-|                    | URL                                                            |
-|--------------------|----------------------------------------------------------------|
-| **Repository:**    | https://github.com/denkwerk/mosparo-form                       |
-| **Documentation:** | https://docs.typo3.org/p/denkwerk/mosparo-form/main/en-us/     |
-| **TER:**           | https://extensions.typo3.org/extension/mosparo_form            |
+|                    | URL                                                         |
+|--------------------|-------------------------------------------------------------|
+| **Repository:**    | https://github.com/denkwerk/mosparo-form                    |
+| **Documentation:** | https://docs.typo3.org/p/denkwerk/mosparo-form/main/en-us/  |
+| **TER:**           | https://extensions.typo3.org/package/denkwerk/mosparo-form  |
 
 ## Compatibility
 

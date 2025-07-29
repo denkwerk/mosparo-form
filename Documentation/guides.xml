@@ -15,7 +15,7 @@
         edit-on-github="denkwerk/mosparo-form"
         edit-on-github-branch="main"
         interlink-shortcode="denkwerk/mosparo-form"
-        project-home="https://extensions.typo3.org/package/mosparo_form"
+        project-home="https://extensions.typo3.org/package/denkwerk/mosparo-form"
         project-issues="https://github.com/denkwerk/mosparo-form/issues"
         project-repository="https://github.com/denkwerk/mosparo-form"
         typo3-core-preferred="stable"
