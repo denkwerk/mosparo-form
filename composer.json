@@ -1,0 +1,47 @@
+{
+    "name": "denkwerk/mosparo-form",
+    "type": "typo3-cms-extension",
+    "description": "Integrates the mosparo spam protection system into TYPO3 EXT:form and Extbase forms, allowing easy and effective spam protection across different form implementations.",
+    "license": "GPL-2.0-or-later",
+    "homepage": "",
+    "authors": [
+        {
+            "name": "Sascha Zander",
+            "role": "Developer",
+            "email": "sascha.zander@denkwerk.com"
+        },
+        {
+            "name": "Tobias Nussbaum",
+            "role": "Developer",
+            "email": "tobias.nussbaum@denkwerk.com"
+        }
+    ],
+    "keywords": [
+        "typo3",
+        "mosparo",
+        "form",
+        "extbase",
+        "spamprotection",
+        "captcha",
+        "spamprevention"
+    ],
+    "require": {
+        "php": ">= 8.1 < 8.5",
+        "typo3/cms-core": "^12.4 || ^13.4",
+        "typo3/cms-form": "^12.4 || ^13.4",
+        "mosparo/php-api-client": "^1.1"
+    },
+    "suggest": {
+        "denkwerk/mosparo-powermail": "Provides integration of the mosparo spam protection system for Powermail forms in TYPO3."
+    },
+    "autoload": {
+        "psr-4": {
+            "Denkwerk\\MosparoForm\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "mosparo_form"
+        }
+    }
+}

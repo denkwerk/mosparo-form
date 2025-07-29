@@ -1,0 +1,5 @@
+The mosparo Form extension integrates the mosparo spam protection system into `TYPO3 Form <https://docs.typo3.org/permalink/typo3/cms-form:start>`_ and :ref:`Extbase forms <f:form> <t3viewhelper:typo3-fluid-form>`, allowing for easy and effective spam prevention across various form implementations.
+
+..  seealso::
+    For more information about mosparo, visit:
+    https://mosparo.io

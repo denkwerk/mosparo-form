@@ -1,0 +1,22 @@
+# customsubcategory=01_General=General
+# customsubcategory=02_DefaultProjects=Default project settings
+
+plugin.tx_mosparoform.settings {
+    # cat=mosparo form/01_General/10; type=string; label=Default mosparo project configuration that is used
+    defaultProject=default
+
+    projects {
+        default {
+            # cat=mosparo form/02_DefaultProjects/default/10; type=string; label=Host of your mosparo installation, which is used in the frontend
+            publicServer=
+            # cat=mosparo form/02_DefaultProjects/default/20; type=string; label=Host of your mosparo installation, which is used at the backend verification
+            verifyServer=
+            # cat=mosparo form/02_DefaultProjects/default/30; type=string; label=Unique identification number of the project in mosparo
+            uuid=
+            # cat=mosparo form/02_DefaultProjects/default/40; type=string; label=Public key of the project in mosparo
+            publicKey=
+            # cat=mosparo form/02_DefaultProjects/default/50; type=string; label=Private key of the project in mosparo
+            privateKey=
+        }
+    }
+}

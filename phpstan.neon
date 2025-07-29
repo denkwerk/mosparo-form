@@ -1,0 +1,4 @@
+parameters:
+  typo3:
+    requestGetAttributeMapping:
+      mosparoFormDefinition: 'TYPO3\CMS\Form\Domain\Model\FormDefinition'

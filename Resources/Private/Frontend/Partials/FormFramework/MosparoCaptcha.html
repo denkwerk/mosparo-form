@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:formvh="http://typo3.org/ns/TYPO3/CMS/Form/ViewHelpers"
+      xmlns:mosparoform="http://typo3.org/ns/Denkwerk/MosparoForm/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<formvh:renderRenderable renderable="{element}">
+    <f:variable name="mosparoConfiguration"
+                value="{mosparoform:mosparoConfiguration(selectedProject: element.properties.selectedProject)}"/>
+
+    <div id="{element.rootForm.identifier}-{element.identifier}"
+         class="mosparo-captcha"
+         data-form-id="{element.rootForm.identifier}"
+         data-captcha-server="{mosparoConfiguration.publicServer}"
+         data-captcha-uuid="{mosparoConfiguration.uuid}"
+         data-captcha-publickey="{mosparoConfiguration.publicKey}"
+    ></div>
+
+    <f:form.validationResults for="{element.rootForm.identifier}.{element.identifier}">
+        <div class="form-group{f:if(condition: '{validationResults.errors.0}', then: ' has-error')}">
+            <f:format.raw>
+                <f:if condition="{validationResults.flattenedErrors}">
+                    <div class="error form-text" role="alert">
+                        <f:for each="{validationResults.errors}" as="error">
+                            <f:format.htmlspecialchars>
+                                {formvh:translateElementError(element: element, error: error)}
+                            </f:format.htmlspecialchars>
+                            <br/>
+                        </f:for>
+                    </div>
+                </f:if>
+            </f:format.raw>
+        </div>
+    </f:form.validationResults>
+
+    <f:asset.script identifier="mosparo_form" src="EXT:mosparo_form/Resources/Public/JavaScript/Frontend/mosparo-form.js" useNonce="true" />
+    <f:asset.script identifier="mosparo-js" defer="true" src="{mosparoConfiguration.publicServer}/build/mosparo-frontend.js"/>
+</formvh:renderRenderable>
+</html>

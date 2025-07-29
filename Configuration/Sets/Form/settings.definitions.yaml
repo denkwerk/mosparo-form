@@ -1,0 +1,51 @@
+#https://github.com/TYPO3-Documentation/t3docs-examples/blob/main/Configuration/Sets/Examples/settings.definitions.yaml
+categories:
+  mosparoForm:
+    label: 'Mosparo form'
+  mosparoForm.general:
+    label: 'General'
+    parent: mosparoForm
+  mosparoForm.projects:
+    label: 'Projects'
+    parent: mosparoForm
+  mosparoForm.projects.default:
+    label: 'Default'
+    parent: mosparoForm.projects
+
+settings:
+  plugin.tx_mosparoform.settings.defaultProject:
+    type: string
+    default: 'default'
+    category: mosparoForm.general
+    label: 'Default project'
+    description: 'Default mosparo project configuration that is used.'
+  plugin.tx_mosparoform.settings.projects.default.publicServer:
+    type: string
+    default: ''
+    category: mosparoForm.projects.default
+    label: 'Public server'
+    description: 'Host of your mosparo installation, which is used in the frontend'
+  plugin.tx_mosparoform.settings.projects.default.verifyServer:
+    type: string
+    default: ''
+    category: mosparoForm.projects.default
+    label: 'Verify Server'
+    description: 'Host of your mosparo installation, which is used at the backend verification'
+  plugin.tx_mosparoform.settings.projects.default.uuid:
+    type: string
+    default: ''
+    category: mosparoForm.projects.default
+    label: 'UUID'
+    description: 'Unique identification number of the project in mosparo'
+  plugin.tx_mosparoform.settings.projects.default.publicKey:
+    type: string
+    default: ''
+    category: mosparoForm.projects.default
+    label: 'Public key'
+    description: 'Public key of the project in mosparo'
+  plugin.tx_mosparoform.settings.projects.default.privateKey:
+    type: string
+    default: ''
+    category: mosparoForm.projects.default
+    label: 'Private key'
+    description: 'Private key of the project in mosparo'

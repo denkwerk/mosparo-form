@@ -1,0 +1,104 @@
+prototypes:
+    standard:
+
+        formEngine:
+            translationFiles:
+                80: 'EXT:mosparo_form/Resources/Private/Language/Database.xlf'
+
+        formElementsDefinition:
+            Form:
+                renderingOptions:
+                    translation:
+                        translationFiles:
+                            80: 'EXT:mosparo_form/Resources/Private/Language/Database.xlf'
+                    partialRootPaths:
+                        1716293528: 'EXT:mosparo_form/Resources/Private/Frontend/Partials/FormFramework/'
+
+            MosparoCaptcha:
+                implementationClassName: TYPO3\CMS\Form\Domain\Model\FormElements\GenericFormElement
+                formEditor:
+                    label: formEditor.elements.MosparoCaptcha.label
+                    group: html5
+                    groupSorting: 1000
+                    iconIdentifier: 't3-mosparo-form'
+                    editors:
+                        100:
+                            identifier: header
+                            templateName: Inspector-FormElementHeaderEditor
+                        200:
+                            identifier: label
+                            templateName: Inspector-TextEditor
+                            label: formEditor.elements.FormElement.editor.label.label
+                            propertyPath: label
+                        300:
+                            identifier: selectedProject
+                            templateName: Inspector-SingleSelectEditor
+                            label: formEditor.elements.MosparoCaptcha.selectedProject.label
+                            propertyPath: properties.selectedProject
+                            selectOptions:
+                                10:
+                                    value: 'default'
+                                    label: formEditor.elements.MosparoCaptcha.selectedProject.option.default
+                        900:
+                            identifier: validators
+                            templateName: Inspector-ValidatorsEditor
+                            label: formEditor.elements.MosparoCaptcha.validators.label
+                            selectOptions:
+                                80:
+                                    value: MosparoCaptchaValidator
+                                    label: formEditor.elements.MosparoCaptcha.validators.label
+                        9999:
+                            identifier: removeButton
+                            templateName: Inspector-RemoveElementEditor
+
+                    predefinedDefaults:
+                        defaultValue: ''
+                        properties:
+                            selectedProject: 'default'
+                        validators:
+                            -
+                                identifier: MosparoCaptchaValidator
+
+                    propertyCollections:
+                        validators:
+                            10:
+                                identifier: MosparoCaptchaValidator
+                                editors:
+                                    100:
+                                        identifier: header
+                                        templateName: Inspector-CollectionElementHeaderEditor
+                                        label: formEditor.elements.MosparoCaptcha.validators.label
+                                    200:
+                                        identifier: validationErrorMessage
+                                        templateName: Inspector-ValidationErrorMessageEditor
+                                        label: formEditor.elements.MosparoCaptcha.validators.Text.editor.validationErrorMessage.label
+                                        fieldExplanationText: formEditor.elements.MosparoCaptcha.validators.Text.editor.validationErrorMessage.fieldExplanationText
+                                        errorCodes:
+                                            10: 1623240740
+                                            20: 1427031929
+                                            30: 1427031944
+                                            40: 1427031933
+                                        propertyPath: properties.validationErrorMessages
+                validators:
+                    -
+                        identifier: MosparoCaptchaValidator
+
+        formEditor:
+            dynamicJavaScriptModules:
+                additionalViewModelModules:
+                    1724082143: '@denkwerk/mosparo-form/backend/form-editor/view-model.js'
+            translationFiles:
+                80: 'EXT:mosparo_form/Resources/Private/Language/Database.xlf'
+            formEditorPartials:
+                FormElement-MosparoCaptcha: Stage/SimpleTemplate
+
+        validatorsDefinition:
+            MosparoCaptchaValidator:
+                implementationClassName: 'Denkwerk\MosparoForm\Validation\Validator\MosparoCaptchaValidator'
+                formEditor:
+                    iconIdentifier: form-validator
+                    label: formEditor.elements.MosparoCaptcha.validators.label
+
+formManager:
+    translationFiles:
+        80: 'EXT:mosparo_form/Resources/Private/Language/Database.xlf'

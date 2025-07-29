@@ -1,0 +1,55 @@
+{
+    "viewHelpers": {
+        "mosparoConfiguration": {
+            "className": "Denkwerk\\MosparoForm\\ViewHelpers\\MosparoConfigurationViewHelper",
+            "namespace": "Denkwerk\\MosparoForm\\ViewHelpers",
+            "name": "MosparoConfigurationViewHelper",
+            "tagName": "mosparoConfiguration",
+            "documentation": "ViewHelper to retrieve the public mosparo project configuration from the TypoScript setup.\n\nThis ViewHelper returns configuration values (`publicServer`, `uuid`, `publicKey`) for a specific\nmosparo project defined in TypoScript. The project can be specified via the `selectedProject` argument.\nIf no project is specified, or the given project is not configured in TypoScript, the configuration\nof the `defaultProject` (as defined in TypoScript) will be used instead.\n\nExample usage in a Fluid template:\n<mosparoform:mosparoConfiguration selectedProject=\"projectA\" \/>\n\nExpected TypoScript structure:\nplugin.tx_mosparoform.settings.projects {\n     defaultProject = projectA\n     projectA {\n         publicServer = https:\/\/...\n         verifyServer = https:\/\/...\n         uuid = ...\n         publicKey = ...\n         privateKey = ...\n     }\n}\n\nClass MosparoConfigurationViewHelper",
+            "xmlNamespace": "http:\/\/typo3.org\/ns\/Denkwerk\/MosparoForm\/ViewHelpers",
+            "docTags": {
+                "@package": "Denkwerk\\MosparoForm\\ViewHelpers"
+            },
+            "argumentDefinitions": {
+                "selectedProject": {
+                    "name": "selectedProject",
+                    "type": "string",
+                    "description": "The mosparo project configuration to be used",
+                    "required": false,
+                    "defaultValue": null,
+                    "escape": null
+                }
+            },
+            "allowsArbitraryArguments": false,
+            "nameWithoutSuffix": "MosparoConfiguration",
+            "namespaceWithoutSuffix": "Denkwerk\\MosparoForm",
+            "uri": "MosparoForm\/MosparoConfiguration"
+        },
+        "uniqueId": {
+            "className": "Denkwerk\\MosparoForm\\ViewHelpers\\UniqueIdViewHelper",
+            "namespace": "Denkwerk\\MosparoForm\\ViewHelpers",
+            "name": "UniqueIdViewHelper",
+            "tagName": "uniqueId",
+            "documentation": "Generates a unique ID for mosparo captchas on pages with multiple forms.\n\nExample:\n<div id=\"mosparo-{mosparoform:uniqueId()}\" ...><\/div>\n\nClass UniqueIdViewHelper",
+            "xmlNamespace": "http:\/\/typo3.org\/ns\/Denkwerk\/MosparoForm\/ViewHelpers",
+            "docTags": {
+                "@package": "Denkwerk\\MosparoForm\\ViewHelpers"
+            },
+            "argumentDefinitions": [],
+            "allowsArbitraryArguments": false,
+            "nameWithoutSuffix": "UniqueId",
+            "namespaceWithoutSuffix": "Denkwerk\\MosparoForm",
+            "uri": "MosparoForm\/UniqueId"
+        }
+    },
+    "uri": "MosparoForm\/Index",
+    "name": "MosparoForm",
+    "label": "MosparoForm",
+    "namespaceAlias": "mosparoform",
+    "targetNamespace": "http:\/\/typo3.org\/ns\/Denkwerk\/MosparoForm\/ViewHelpers",
+    "includesNamespaces": [
+        "http:\/\/typo3.org\/ns\/Denkwerk\/MosparoForm\/ViewHelpers"
+    ],
+    "sourceEdit": null,
+    "headlineIdentifierPrefix": null
+}

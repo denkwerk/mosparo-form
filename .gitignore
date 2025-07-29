@@ -1,0 +1,8 @@
+# Temporary files
+.DS_Store
+
+# PhpStorm/Webstorm project files
+.idea/*
+
+# TYPO3 GENERATED-temp
+Documentation-GENERATED-temp

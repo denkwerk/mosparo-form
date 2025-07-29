@@ -1,0 +1,7 @@
+name: denkwerk/mosparo-form
+label: denkwerk - mosparo integration for EXT:form and Extbase-based forms
+settings:
+  plugin:
+      tx_mosparoform:
+          settings:
+              defaultProject: default

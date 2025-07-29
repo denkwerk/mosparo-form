@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:mosparoform="http://typo3.org/ns/Denkwerk/MosparoForm/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:comment>
+    Partial argument:
+    selectedProject: The id of mosparo project configuration to be used,
+    formId: ID of the form element. If provided, the JavaScript will attempt to toggle the submit button of the form based on the state of mosparo.
+</f:comment>
+
+<f:variable name="mosparoConfiguration" value="{mosparoform:mosparoConfiguration(selectedProject: selectedProject)}"/>
+
+<div id="mosparo-{mosparoform:uniqueId()}"
+     class="mosparo-captcha"
+     data-form-id="{formId}"
+     data-captcha-server="{mosparoConfiguration.publicServer}"
+     data-captcha-uuid="{mosparoConfiguration.uuid}"
+     data-captcha-publickey="{mosparoConfiguration.publicKey}"
+></div>
+
+<f:form.validationResults for="form">
+    <f:if condition="{validationResults.errors}">
+        <ul>
+            <f:for each="{validationResults.errors}" as="error">
+                <li>{error.message}</li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:form.validationResults>
+
+<f:asset.script identifier="mosparo_form" src="EXT:mosparo_form/Resources/Public/JavaScript/Frontend/mosparo-form.js" useNonce="true" />
+<f:asset.script identifier="mosparo-js" defer="true" src="{mosparoConfiguration.publicServer}/build/mosparo-frontend.js"/>
+</html>

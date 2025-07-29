@@ -1,0 +1,23 @@
+plugin.tx_form {
+	settings {
+		yamlConfigurations {
+			1716293528 = EXT:mosparo_form/Configuration/Yaml/MosparoCaptchaFormField.yaml
+		}
+	}
+}
+
+plugin.tx_mosparoform {
+    settings {
+        defaultProject={$plugin.tx_mosparoform.settings.defaultProject}
+
+        projects {
+            default {
+                publicServer={$plugin.tx_mosparoform.settings.projects.default.publicServer}
+                verifyServer={$plugin.tx_mosparoform.settings.projects.default.verifyServer}
+                uuid={$plugin.tx_mosparoform.settings.projects.default.uuid}
+                publicKey={$plugin.tx_mosparoform.settings.projects.default.publicKey}
+                privateKey={$plugin.tx_mosparoform.settings.projects.default.privateKey}
+            }
+        }
+    }
+}
