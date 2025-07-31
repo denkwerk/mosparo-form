@@ -1,5 +1,4 @@
 <?php
-declare(strict_types=1);
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'denkwerk - mosparo integration for EXT:form and Extbase-based forms',
