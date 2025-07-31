@@ -33,7 +33,7 @@ which mosparo uses to verify whether the submitted data has been tampered with o
     | `Bypass protection <https://documentation.mosparo.io/docs/integration/bypass_protection>`__
 
 ..  seealso::
-   For the full implementation, see the source code of the `mosparo Powermail <https://extensions.typo3.org/package/mahou/mosparo-powermail>`__ integration on GitHub: https://github.com/Digi92/mosparo-powermail
+   For the full implementation, see the source code of the `mosparo Powermail <https://extensions.typo3.org/extension/mosparo_powermail>`__ integration on GitHub: https://github.com/Digi92/mosparo-powermail
 
 .. _form-normalizer-custom:
 

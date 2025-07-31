@@ -45,6 +45,6 @@ See also `Installing extensions, TYPO3 Getting started <https://docs.typo3.org/p
 Install mosparo form in Classic Mode
 =========================================
 
-| Or download the extension from `https://extensions.typo3.org/package/denkwerk/mosparo-form <https://extensions.typo3.org/package/denkwerk/mosparo-form>`_ and install it in the Extension Manager.
+| Or download the extension from `https://extensions.typo3.org/extension/mosparo_form <https://extensions.typo3.org/extension/mosparo_form>`_ and install it in the Extension Manager.
 | The extension depends on the PHP package `mosparo/php-api-client <https://github.com/mosparo/php-api-client>`_.
 | Make sure this package is installed in your TYPO3 environment or otherwise available so the extension can function properly.
