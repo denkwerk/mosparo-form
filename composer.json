@@ -43,5 +43,13 @@
         "typo3/cms": {
             "extension-key": "mosparo_form"
         }
+    },
+    "scripts": {
+        "prepare-release": [
+            "rm -rf .github",
+            "rm Makefile",
+            "rm phpstan.neon",
+            "rm .gitignore"
+        ]
     }
 }
