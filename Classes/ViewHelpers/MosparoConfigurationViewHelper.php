@@ -16,6 +16,7 @@ declare(strict_types=1);
 namespace Denkwerk\MosparoForm\ViewHelpers;
 
 use TYPO3\CMS\Core\Http\ServerRequest;
+use TYPO3\CMS\Core\TypoScript\FrontendTypoScript;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
@@ -69,6 +70,7 @@ class MosparoConfigurationViewHelper extends AbstractViewHelper
 
         if (isset($GLOBALS['TYPO3_REQUEST']) &&
             $GLOBALS['TYPO3_REQUEST'] instanceof ServerRequest &&
+            $GLOBALS['TYPO3_REQUEST']->getAttribute('frontend.typoscript') instanceof FrontendTypoScript &&
             $GLOBALS['TYPO3_REQUEST']->getAttribute('frontend.typoscript')->hasSetup() === true
         ) {
             $typoScriptSetupArray = $GLOBALS['TYPO3_REQUEST']->getAttribute('frontend.typoscript')->getSetupArray();
