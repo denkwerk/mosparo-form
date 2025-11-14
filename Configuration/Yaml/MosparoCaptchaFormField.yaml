@@ -86,7 +86,7 @@ prototypes:
         formEditor:
             dynamicJavaScriptModules:
                 additionalViewModelModules:
-                    1724082143: '@denkwerk/mosparo-form/backend/form-editor/view-model.js'
+                    1724082143: '@denkwerk/mosparo-form/Backend/form-editor/view-model.js'
             translationFiles:
                 80: 'EXT:mosparo_form/Resources/Private/Language/Database.xlf'
             formEditorPartials:
