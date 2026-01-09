@@ -18,6 +18,7 @@ namespace Denkwerk\MosparoForm\Validation\Validator;
 use Denkwerk\MosparoForm\Domain\Model\Form\FormsMosparoFormDefinition;
 use Denkwerk\MosparoForm\Domain\Model\Form\MosparoFormDefinitionInterface;
 use Denkwerk\MosparoForm\FormNormalizer\FormNormalizerManager;
+use Denkwerk\MosparoForm\Settings\Type\PasswordType;
 use Mosparo\ApiClient\Client;
 use TYPO3\CMS\Core\Http\ServerRequest;
 use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
@@ -34,6 +35,7 @@ final class MosparoCaptchaValidator extends AbstractValidator
 
     public function __construct(
         protected FormNormalizerManager $formNormalizerManager,
+        protected PasswordType $passwordType,
     ) {
     }
 
@@ -115,7 +117,9 @@ final class MosparoCaptchaValidator extends AbstractValidator
 
         $configuration['verifyServer'] = rtrim($typoScriptSetupArray['plugin.']['tx_mosparoform.']['settings.']['projects.'][$selectedProject . '.']['verifyServer'] ?? '', '/');
         $configuration['publicKey'] = $typoScriptSetupArray['plugin.']['tx_mosparoform.']['settings.']['projects.'][$selectedProject . '.']['publicKey']  ?? '';
-        $configuration['privateKey'] = $typoScriptSetupArray['plugin.']['tx_mosparoform.']['settings.']['projects.'][$selectedProject . '.']['privateKey'] ?? '';
+        $encryptedPrivateKey = $typoScriptSetupArray['plugin.']['tx_mosparoform.']['settings.']['projects.'][$selectedProject . '.']['privateKey'] ?? '';
+        // Decrypt the private key if it's encrypted
+        $configuration['privateKey'] = $this->passwordType->decrypt($encryptedPrivateKey);
         $configuration['auth'] = $typoScriptSetupArray['plugin.']['tx_mosparoform.']['settings.']['projects.'][$selectedProject . '.']['auth'] ?? null;
 
         if (

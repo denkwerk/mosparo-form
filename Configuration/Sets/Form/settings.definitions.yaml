@@ -44,7 +44,7 @@ settings:
     label: 'Public key'
     description: 'Public key of the project in mosparo'
   plugin.tx_mosparoform.settings.projects.default.privateKey:
-    type: string
+    type: password
     default: ''
     category: mosparoForm.projects.default
     label: 'Private key'
