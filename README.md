@@ -18,9 +18,9 @@ It includes these features:
 
 ## Compatibility
 
-| Version | TYPO3       | PHP       | mosparo | Supported Adapters                  |
-|---------|-------------|-----------|---------|-------------------------------------|
-| 1.0.x   | 12.4 – 13.4 | 8.1 – 8.3 | ≥ 1.3.7 | Form, Extbase, Custom Integration   |
+| Version | TYPO3       | PHP       | mosparo  | Supported Adapters                  |
+|---------|-------------|-----------|----------|-------------------------------------|
+| 1.0.x   | 13.4 – 14.2 | 8.1 – 8.3 | ≥ 1.4.12 | Form, Extbase, Custom Integration   |
 
 
 ## Custom Integration via Form Normalizer

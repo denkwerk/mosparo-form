@@ -22,6 +22,8 @@ use TYPO3\CMS\Form\Domain\Runtime\FormRuntime;
 
 /**
  * Class FormElementHooks
+ * ToDo: Remove as soon as TYPO3 v13 support is discontinued,replaced by BeforeRenderableIsValidatedEventListener (v14+).
+ *
  * @package Denkwerk\MosparoForm\Hooks
  */
 class FormElementHooks
