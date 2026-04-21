@@ -27,8 +27,8 @@
     ],
     "require": {
         "php": ">= 8.2 < 8.6",
-        "typo3/cms-core": "^13.4 || ^14.2",
-        "typo3/cms-form": "^13.4 || ^14.2",
+        "typo3/cms-core": "^13.4 || ^14.3",
+        "typo3/cms-form": "^13.4 || ^14.3",
         "mosparo/php-api-client": "^1.1"
     },
     "suggest": {

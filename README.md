@@ -20,7 +20,7 @@ It includes these features:
 
 | Version | TYPO3       | PHP       | mosparo  | Supported Adapters                  |
 |---------|-------------|-----------|----------|-------------------------------------|
-| 1.0.x   | 13.4 – 14.2 | 8.1 – 8.3 | ≥ 1.4.12 | Form, Extbase, Custom Integration   |
+| 1.0.x   | 13.4 – 14.3 | 8.1 – 8.3 | ≥ 1.4.12 | Form, Extbase, Custom Integration   |
 
 
 ## Custom Integration via Form Normalizer
