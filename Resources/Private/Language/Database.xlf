@@ -7,6 +7,9 @@
             <trans-unit id="formEditor.elements.MosparoCaptcha.label" resname="formEditor.elements.MosparoCaptcha.label" xml:space="preserve">
                 <source>Mosparo Captcha</source>
             </trans-unit>
+            <trans-unit id="formEditor.elements.MosparoCaptcha.description" resname="formEditor.elements.MosparoCaptcha.description" xml:space="preserve">
+                <source>A field for adding mosparo spam protection to your form, including automatic JavaScript loading and server-side validation</source>
+            </trans-unit>
             <trans-unit id="formEditor.elements.MosparoCaptcha.editor.defaultValue.label" resname="formEditor.elements.MosparoCaptcha.editor.defaultValue.label" xml:space="preserve">
                 <source>Default value</source>
             </trans-unit>

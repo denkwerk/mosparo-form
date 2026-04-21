@@ -26,9 +26,9 @@
         "spamprevention"
     ],
     "require": {
-        "php": ">= 8.1 < 8.5",
-        "typo3/cms-core": "^12.4 || ^13.4",
-        "typo3/cms-form": "^12.4 || ^13.4",
+        "php": ">= 8.2 < 8.6",
+        "typo3/cms-core": "^13.4 || ^14.2",
+        "typo3/cms-form": "^13.4 || ^14.2",
         "mosparo/php-api-client": "^1.1"
     },
     "suggest": {
