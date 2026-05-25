@@ -14,7 +14,7 @@ It includes these features:
 |--------------------|-----------------------------------------------------------|
 | **Repository:**    | https://github.com/denkwerk/mosparo-form                  |
 | **Documentation:** | https://docs.typo3.org/p/denkwerk/mosparo-form/1.0/en-us/ |
-| **TER:**           | https://extensions.typo3.org/extension/mosparo_powermail  |
+| **TER:**           | https://extensions.typo3.org/extension/mosparo_form       |
 
 ## Compatibility
 
